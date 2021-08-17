@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/form.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="calculator_front">
+            <form action="POST" >
+                <div class="form-group">
+                    <label for="type-insurer">ТИП СТРАХУВАЛЬНИКА</label>
+                    <select name="type-insurer">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="franchise">ФРАНШИЗА</label>
+                    <select name="franchise" class="franchise">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="type-vehicle">ТИП ТЗ</label>
+                    <select name="type-vehicle">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="place-registration">МІСЦЕ РЕЄСТРАЦІЇ</label>
+                    <select name="place-registration">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                    </select>
+                    <div style='display: flex;'>
+                        <input type="checkbox" class="custom-checkbox" name="foreign-check">
+                        <label for="foreign-check">За межами україни</label>
+                    </div>
+                </div>
+            </form>    
+        </div>
+    </div>
+   
+</body>
+</html>

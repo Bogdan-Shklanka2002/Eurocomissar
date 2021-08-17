@@ -1,0 +1,113 @@
+.sidenav {
+    height: 630px;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    background-color: #5C4DB1;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 90px;
+    margin: 21px 24px 0 0;
+    
+    border: 0;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.sidenav .header_link {
+    height: 65px;
+    padding: 0 0 0 10px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+    display: flex;
+    
+    transition: 0.3s;
+    
+    align-items: center;
+    
+    border: 0;
+    border-bottom: 2px solid #fff; 
+}
+
+.sidenav_title{
+    display: flex;
+    position: absolute;
+    top: 13px;
+    left: 130px;
+    
+    margin-bottom: 42px;
+    
+    font-family: 'Segoe UI';
+    font-size: 31px;
+    font-weight: 400;
+    line-height: 41px;
+    color:#fff;
+}
+.sidenav .closebtn {
+     position: absolute;
+    top: 0;
+    right: 25px;
+    margin: 26px 21px 0 50px;
+}
+.sidenav .header_link div{
+    width: 50px;
+   
+}
+.sidenav .header_link_img{
+    vertical-align: middle;
+    margin: 0 auto;
+}
+.sidenav .header_link_title{
+    margin: 10px 10px 10px 0;
+}
+
+.sidenav a:hover {
+  color: rgba(255, 255, 255, 0.66);
+}
+
+
+.sidenav a:last-of-type{
+    border: 0;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/*burger*/
+.header_burger{
+    display: block;
+    position: relative;
+    width: 34px;
+    height: 28px;
+    cursor:pointer;
+}
+.header_burger:before,
+.header_burger:after{
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 4px;
+    left: 0;
+}
+.header_burger span{
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    top: 12px;
+}
+.header_burger:before{
+    top: 0;
+}
+.header_burger:after{
+    bottom: 0;
+}

@@ -1,0 +1,172 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+#mobile {
+    max-width:756px;
+    width:100%;
+    margin: 0 auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+#mobile .header{
+    display:flex;
+    align-items: center;
+    justify-content:space-around;
+    background:#fff;
+}
+#mobile .header p{
+    color:#FFBF67;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px; 
+}
+#mobile h1{
+    color:#5C4DB1;
+    font-family: "Segoe UI"; font-size: 30px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 34px;
+}
+#mobile .info{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:90%;
+    margin: 0 auto;
+    text-align:justify;
+    color:#444444;
+    font-family: "Segoe UI"; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 100; line-height: 20px; 
+}
+#mobile .info_titles{
+    font-family: "Segoe UI"; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 15.4px;
+}
+#mobile footer h3{
+    font-family: "Segoe UI"; font-size: 31px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 15.4px;
+    margin: 0;
+    padding-top: 2rem;
+    
+    color: #fff;
+}
+#mobile footer p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    color:#fff;
+    
+    text-align: center;
+    
+    padding-bottom: .7rem;
+    margin-bottom: 0;
+    
+}
+#mobile footer p > a{
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    color:#fff;
+    
+    text-align: center;
+}
+#mobile .dot{
+    width: 17px;
+    height: 17px;
+    background-color: #fff;
+    margin: 0 6px;
+    border: 0;
+    border-radius: 50px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    vertical-align: middle;
+}
+#mobile .header_application{
+    max-width: inherit;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    margin: 30px 70px 0 0;   
+}
+#mobile .header_application img{
+    vertical-align: middle;
+}
+#mobile .header_application p{
+    font-family: 'Segoe UI';
+    font-size: 20px;
+    font-weight: 400;
+    color: #5E636C;
+}
+#mobile .call_comisar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #85D59D;
+    border: 0px solid;
+    border-radius: 20px;
+    box-shadow: 2px 3px 5px rgb(0 0 0 / 30%);
+    position: relative;
+    margin-bottom: -2rem;
+    padding: .5rem;
+}
+
+#mobile .call_comisar .calling a img{
+    vertical-align: middle;
+}
+#mobile .call_comisar .calling{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-top: 22px;
+}
+#mobile .contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #5C4DB1;
+    border-radius: 20px;
+    box-shadow: 2px 3px 5px rgb(0 0 0 / 50%);
+    padding-top: 2rem;
+}
+#mobile .contacts h3{
+    padding: 4rem 0 0 0;
+}
+#mobile .contacts .main_contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    height: 363px;
+    
+    margin: 18px 0 0 0;
+}
+#mobile .contacts .main_info_text{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: medium;
+    color:#fff;
+    
+    text-align: center;
+}
+#mobile .contacts .main_info_text a:hover{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: medium;
+    color:rgba(237, 237, 237, 0.78);
+    
+    text-align: center;
+}
+#mobile .contacts_application{
+    max-width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#mobile .contacts_application img{
+    vertical-align: middle;
+}
+#mobile .contacts_application p{
+    font-family: 'Segoe UI';
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="/Scripts/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <!-- <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="../css/form.css">  
+</head>
+    <body>
+        <div id="page-loader">
+            <div class="loader"></div>
+        </div>
+        <div class="container1 body-content">
+            
+
+
+
+<!-- <link href="/lib/bootstrap-material-design-dist/css/bootstrap-material-design.min.css" rel="stylesheet" type="text/css" />
+<link href="/css/site.min.css?v=sdTvuetBVelAH8AVQJkPLvbkbVhnZhaSAn6Ol_tCtO4" rel="stylesheet" type="text/css" />
+<link href="/lib/Toastr/toastr.min.css" rel="stylesheet" /> -->
+
+<div id="tariff-choose">
+    <h2 id="culculator-title" class="pt-4">Автоцивілка</h2>
+    <div id="choose_insurer" class="mt-4">
+        <h3 id="culculator-subtitle">Розрахунок вартості:</h3>
+        <img id="ingo-part" class="choose-custom-button" src="/images/companyLogo/ingo_logo.svg" />
+        <img class="choose-custom-button" src="/images/companyLogo/182.png" data-api="PartnerShipEwa" data-code="" />
+        <div class="all_companies choose-custom-button active" data-api="EWA">Всі страхові</div>
+    </div>
+    <div id="ingo-part-frame" style="display: none;">
+        <iframe src="https://platform.aiwa.in.ua/d/zVGdGR8Kej/t/1WVlPk306r" width="100%" height="800px" frameborder="0" scrolling="yes" ></iframe>
+    </div>
+    <div id="calculator">
+        <div id="calculate-block">
+            
+<form id="calculate-form" class="calc-form" role="form" action="/InsuranceSale/GetCalculator" method="post">
+    <input type="hidden" value="0" data-val="true" data-val-required="The SalePoint field is required." id="SalePoint" name="SalePoint" />
+    <div class="calc-form-group">
+        <div class="form-group">
+            <label class="bmd-label-floating" for="CustomerCategory">Тип страхувальника:</label>
+            <select class="form-control" data-val="true" data-val-required="&#x412;&#x438;&#x431;&#x435;&#x440;&#x456;&#x442;&#x44C; &#x442;&#x438;&#x43F; &#x441;&#x442;&#x440;&#x430;&#x445;&#x443;&#x432;&#x430;&#x43B;&#x44C;&#x43D;&#x438;&#x43A;&#x430;" id="CustomerCategory" name="CustomerCategory">
+                <option value="">Виберіть тип страхувальника</option>
+            <option value="LEGAL">&#x42E;&#x440;&#x438;&#x434;&#x438;&#x447;&#x43D;&#x430; &#x43E;&#x441;&#x43E;&#x431;&#x430;</option>
+<option value="NATURAL">&#x424;i&#x437;&#x438;&#x447;&#x43D;&#x430; &#x43E;&#x441;&#x43E;&#x431;&#x430;</option>
+<option value="PRIVILEGED">&#x41F;i&#x43B;&#x44C;&#x433;&#x43E;&#x432;&#x438;&#x43A;</option>
+</select>
+            <span class="field-validation-valid" data-valmsg-for="CustomerCategory" data-valmsg-replace="true">ggggg</span>
+        </div>
+        <div class="form-group">
+            <label class="bmd-label-floating" for="Franchise">Франшиза:</label>
+            <select class="form-control" data-val="true" data-val-number="The field Franchise must be a number." data-val-required="The Franchise field is required." id="Franchise" name="Franchise">
+                <option value="0" selected="selected">0</option>
+                <option value="1000">1000</option>
+                <option value="1300">1300</option>
+                <option value="1500">1500</option>
+                <option value="2000">2000</option>
+                <option value="2500">2500</option>
+                <option value="2600">2600</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="bmd-label-floating" for="AutoCategory">Тип ТЗ (категорiя):</label>
+        <select class="form-control" data-val="true" data-val-required="&#x412;&#x438;&#x431;&#x435;&#x440;&#x456;&#x442;&#x44C; &#x43A;&#x430;&#x442;&#x435;&#x433;&#x43E;&#x440;&#x456;&#x44E; &#x422;&#x417;" id="AutoCategory" name="AutoCategory">
+            <option value="">Виберіть категорію ТЗ</option>
+        <option value="A1">&#x43C;&#x43E;&#x442;&#x43E;&#x446;&#x438;&#x43A;&#x43B;/&#x43C;&#x43E;&#x442;&#x43E;&#x440;&#x43E;&#x43B;&#x435;&#x440; - &#x434;&#x43E; 300 &#x441;&#x43C;3</option>
+<option value="A2">&#x43C;&#x43E;&#x442;&#x43E;&#x446;&#x438;&#x43A;&#x43B;/&#x43C;&#x43E;&#x442;&#x43E;&#x440;&#x43E;&#x43B;&#x435;&#x440; - &#x431;&#x456;&#x43B;&#x44C;&#x448;&#x435; 300 &#x441;&#x43C;3</option>
+<option value="B1">&#x43B;&#x435;&#x433;&#x43A;&#x43E;&#x432;&#x43E;&#x439; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C; - &#x434;&#x43E; 1600 &#x441;&#x43C;3</option>
+<option value="B2">&#x43B;&#x435;&#x433;&#x43A;&#x43E;&#x432;&#x43E;&#x439; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C; - 1601 - 2000 &#x441;&#x43C;3</option>
+<option value="B3">&#x43B;&#x435;&#x433;&#x43A;&#x43E;&#x432;&#x43E;&#x439; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C; - 2001 - 3000 &#x441;&#x43C;3</option>
+<option value="B4">&#x43B;&#x435;&#x433;&#x43A;&#x43E;&#x432;&#x43E;&#x439; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C; - &#x431;&#x456;&#x43B;&#x44C;&#x448;&#x435; 3000 &#x441;&#x43C;3</option>
+<option value="B5">&#x43B;&#x435;&#x433;&#x43A;&#x43E;&#x432;&#x438;&#x439; &#x435;&#x43B;&#x435;&#x43A;&#x442;&#x440;&#x43E;&#x43C;&#x43E;&#x431;&#x456;&#x43B;&#x44C; (&#x432;&#x438;&#x43A;&#x43B;&#x44E;&#x447;&#x43D;&#x43E; &#x437; &#x441;&#x438;&#x43B;&#x43E;&#x432;&#x438;&#x43C; &#x435;&#x43B;&#x435;&#x43A;&#x442;&#x440;&#x43E;&#x434;&#x432;&#x438;&#x433;&#x443;&#x43D;&#x43E;&#x43C;, &#x43A;&#x440;&#x456;&#x43C; &#x433;&#x456;&#x431;&#x440;&#x438;&#x434;&#x43D;&#x438;&#x445; &#x430;&#x432;&#x442;&#x43E;)</option>
+<option value="C1">&#x432;&#x430;&#x43D;&#x442;&#x430;&#x436;&#x43D;&#x438;&#x439; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x456;&#x43B;&#x44C; - &#x434;&#x43E; 2&#x442;</option>
+<option value="C2">&#x432;&#x430;&#x43D;&#x442;&#x430;&#x436;&#x43D;&#x438;&#x439; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x456;&#x43B;&#x44C; - &#x431;&#x456;&#x43B;&#x44C;&#x448;&#x435; 2&#x442;</option>
+<option value="D1">&#x430;&#x432;&#x442;&#x43E;&#x431;&#x443;&#x441; - &#x434;&#x43E; 20 &#x43E;&#x441;&#x456;&#x431;</option>
+<option value="D2">&#x430;&#x432;&#x442;&#x43E;&#x431;&#x443;&#x441; - &#x431;&#x456;&#x43B;&#x44C;&#x448;&#x435;  20 &#x43E;&#x441;&#x456;&#x431;</option>
+<option value="E">&#x43F;&#x440;&#x438;&#x447;&#x456;&#x43F; &#x434;&#x43E; &#x432;&#x430;&#x43D;&#x442;&#x430;&#x436;&#x43D;&#x43E;&#x433;&#x43E; &#x430;&#x432;&#x442;&#x43E;</option>
+<option value="F">&#x43F;&#x440;&#x438;&#x447;&#x456;&#x43F; &#x434;&#x43E; &#x43B;&#x435;&#x433;&#x43A;&#x43E;&#x432;&#x43E;&#x433;&#x43E; &#x430;&#x432;&#x442;&#x43E;</option>
+</select>
+        <span class="field-validation-valid" data-valmsg-for="AutoCategory" data-valmsg-replace="true"></span>
+    </div>
+
+    <div class="calc-form-group">
+        <div class="filtering-list">
+            <div id="registration-place" class="form-group">
+                <label class="bmd-label-floating" for="RegistrationPlace">Введіть місце реєстрації власника ТЗ</label>
+                <span class="curent-text form-control"></span>
+                <input class="value-text form-control input-hidden" type="text" value="" data-val="true" data-val-other="#OutsideUkraine" data-val-otherval="False" data-val-requiredwhen="&#x412;&#x432;&#x435;&#x434;&#x456;&#x442;&#x44C; &#x43C;&#x456;&#x441;&#x446;&#x435; &#x440;&#x435;&#x454;&#x441;&#x442;&#x440;&#x430;&#x446;&#x456;&#x457; &#x432;&#x43B;&#x430;&#x441;&#x43D;&#x438;&#x43A;&#x430; &#x422;&#x417;" id="RegistrationPlace" name="RegistrationPlace" />
+                <div class="list-items list-unactive">
+                    <span class="search-icon">
+                        <input type="text" class="search-input search-item" placeholder="Пошук" data-url="/InsuranceSale/GetPlaces" />
+                        <span class="loader-small"></span>
+                    </span>
+                    <ul class="list">
+                            <li data-value="1" class="item-list">&#x43C;. &#x41A;&#x438;&#x457;&#x432;, &#x423;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x430;</li>
+                            <li data-value="2" class="item-list">&#x43C;. &#x411;&#x43E;&#x440;&#x438;&#x441;&#x43F;&#x456;&#x43B;&#x44C;, &#x41A;&#x438;&#x457;&#x432;&#x441;&#x44C;&#x43A;&#x430;  &#x43E;&#x431;&#x43B;., &#x423;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x430;</li>
+                            <li data-value="3" class="item-list">&#x43C;. &#x411;&#x440;&#x43E;&#x432;&#x430;&#x440;&#x438;, &#x41A;&#x438;&#x457;&#x432;&#x441;&#x44C;&#x43A;&#x430;  &#x43E;&#x431;&#x43B;., &#x423;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x430;</li>
+                            <li data-value="4" class="item-list">&#x43C;. &#x412;&#x430;&#x441;&#x438;&#x43B;&#x44C;&#x43A;&#x456;&#x432;, &#x41A;&#x438;&#x457;&#x432;&#x441;&#x44C;&#x43A;&#x430;  &#x43E;&#x431;&#x43B;., &#x423;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x430;</li>
+                            <li data-value="5" class="item-list">&#x43C;. &#x406;&#x440;&#x43F;&#x456;&#x43D;&#x44C;, &#x41A;&#x438;&#x457;&#x432;&#x441;&#x44C;&#x43A;&#x430;  &#x43E;&#x431;&#x43B;., &#x423;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x430;</li>
+                            <li data-value="6" class="item-list">&#x43C;. &#x412;&#x438;&#x448;&#x43D;&#x435;&#x432;&#x435;, &#x41A;&#x438;&#x454;&#x432;&#x43E;-&#x441;&#x432;&#x44F;&#x442;&#x43E;&#x448;&#x438;&#x43D;&#x441;&#x44C;&#x43A;&#x438;&#x439;  &#x440;-&#x43D;, &#x41A;&#x438;&#x457;&#x432;&#x441;&#x44C;&#x43A;&#x430;  &#x43E;&#x431;&#x43B;., &#x423;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x430;</li>
+                            <li data-value="7" class="item-list">&#x43C;. &#x411;&#x43E;&#x44F;&#x440;&#x43A;&#x430;, &#x41A;&#x438;&#x454;&#x432;&#x43E;-&#x441;&#x432;&#x44F;&#x442;&#x43E;&#x448;&#x438;&#x43D;&#x441;&#x44C;&#x43A;&#x438;&#x439;  &#x440;-&#x43D;, &#x41A;&#x438;&#x457;&#x432;&#x441;&#x44C;&#x43A;&#x430;  &#x43E;&#x431;&#x43B;., &#x423;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x430;</li>
+                            <li data-value="8" class="item-list">&#x43C;. &#x412;&#x438;&#x448;&#x433;&#x43E;&#x440;&#x43E;&#x434;, &#x41A;&#x438;&#x457;&#x432;&#x441;&#x44C;&#x43A;&#x430;  &#x43E;&#x431;&#x43B;., &#x423;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x430;</li>
+                            <li data-value="9" class="item-list">&#x43C;. &#x425;&#x430;&#x440;&#x43A;&#x456;&#x432;, &#x425;&#x430;&#x440;&#x43A;&#x456;&#x432;&#x441;&#x44C;&#x43A;&#x430;  &#x43E;&#x431;&#x43B;., &#x423;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x430;</li>
+                            <li data-value="10" class="item-list">&#x43C;. &#x41E;&#x434;&#x435;&#x441;&#x430;, &#x41E;&#x434;&#x435;&#x441;&#x44C;&#x43A;&#x430;  &#x43E;&#x431;&#x43B;., &#x423;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x430;</li>
+                            <li data-value="14" class="item-list">&#x43C;. &#x414;&#x43D;&#x456;&#x43F;&#x440;&#x43E;, &#x414;&#x43D;&#x456;&#x43F;&#x440;&#x43E;&#x43F;&#x435;&#x442;&#x440;&#x43E;&#x432;&#x441;&#x44C;&#x43A;&#x430;  &#x43E;&#x431;&#x43B;., &#x423;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x430;</li>
+                            <li data-value="15" class="item-list">&#x43C;. &#x41B;&#x44C;&#x432;&#x456;&#x432;, &#x41B;&#x44C;&#x432;&#x456;&#x432;&#x441;&#x44C;&#x43A;&#x430;  &#x43E;&#x431;&#x43B;., &#x423;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x430;</li>
+                            <li data-value="10453" class="item-list">&#x43C;. &#x411;&#x443;&#x447;&#x430;, &#x41A;&#x438;&#x457;&#x432;&#x441;&#x44C;&#x43A;&#x430;  &#x43E;&#x431;&#x43B;., &#x423;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x430;</li>
+                            <li data-value="10463" class="item-list">&#x43C;. &#x41E;&#x431;&#x443;&#x445;&#x456;&#x432;, &#x41A;&#x438;&#x457;&#x432;&#x441;&#x44C;&#x43A;&#x430;  &#x43E;&#x431;&#x43B;., &#x423;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x430;</li>
+                    </ul>
+                </div>
+                <span class="field-validation-valid" data-valmsg-for="RegistrationPlace" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+        <div id="outside-ukraine-field" class="checkbox">
+            <label for="OutsideUkraine">
+                за межами України <input type="checkbox" data-val="true" data-val-required="The OutsideUkraine field is required." id="OutsideUkraine" name="OutsideUkraine" value="true" />
+            </label>
+
+        </div>
+    </div>
+
+    <div class="calc-form-group">
+        <div class="form-group" style="width: 100%">
+            <label class="bmd-label-floating" for="RegistrationType">Тип реєстрації:</label>
+            <select class="form-control" data-val="true" data-val-required="&#x412;&#x438;&#x431;&#x435;&#x440;&#x456;&#x442;&#x44C; &#x442;&#x438;&#x43F; &#x440;&#x435;&#x454;&#x441;&#x442;&#x440;&#x430;&#x446;&#x456;&#x457;" id="RegistrationType" name="RegistrationType">
+                <option value="">Виберіть тип реєстрації</option>
+            <option value="PERMANENT_WITHOUT_OTK">&#x41F;&#x43E;&#x441;&#x442;&#x456;&#x439;&#x43D;&#x430; &#x440;&#x435;&#x454;&#x441;&#x442;&#x440;&#x430;&#x446;&#x456;&#x44F; (&#x431;&#x435;&#x437; &#x41E;&#x422;&#x41A;)</option>
+<option value="PERMANENT_WITH_OTK">&#x41F;&#x43E;&#x441;&#x442;&#x456;&#x439;&#x43D;&#x430; &#x440;&#x435;&#x454;&#x441;&#x442;&#x440;&#x430;&#x446;&#x456;&#x44F; (&#x437; &#x41E;&#x422;&#x41A;)</option>
+<option value="TEMPORARY">&#x422;&#x438;&#x43C;&#x447;&#x430;&#x441;&#x43E;&#x432;&#x430; &#x440;&#x435;&#x454;&#x441;&#x442;&#x440;&#x430;&#x446;&#x456;&#x44F;</option>
+<option value="TEMPORARY_ENTRANCE">&#x422;&#x438;&#x43C;&#x447;&#x430;&#x441;&#x43E;&#x432;&#x438;&#x439; &#x432;&#x27;&#x457;&#x437;&#x434;</option>
+</select>
+            <span class="field-validation-valid" data-valmsg-for="RegistrationType" data-valmsg-replace="true"></span>
+        </div>
+        <div class="form-group" style="display: none">
+            <label id="label-otk-date" class="" for="OtkDate">Дата наступного ОТК:</label>
+            <input type="date" class="form-control custom" value="" data-val="true" data-val-required="&#x412;&#x438;&#x431;&#x435;&#x440;&#x456;&#x442;&#x44C; &#x434;&#x430;&#x442;&#x443;" id="OtkDate" name="OtkDate" />
+            <span class="field-validation-valid" data-valmsg-for="OtkDate" data-valmsg-replace="true"></span>
+        </div>
+    </div>
+    <div class="calc-form-group">
+        <div class="form-group">
+            <label class="bmd-label-floating" for="DateFrom">Початок дії:</label>
+            <input type="date" class="form-control custom" value="2021-02-25" data-val="true" data-val-required="&#x412;&#x438;&#x431;&#x435;&#x440;&#x456;&#x442;&#x44C; &#x434;&#x430;&#x442;&#x443; &#x43F;&#x43E;&#x447;&#x430;&#x442;&#x43A;&#x443;" id="DateFrom" name="DateFrom" />
+            <span class="field-validation-valid" data-valmsg-for="DateFrom" data-valmsg-replace="true"></span>
+        </div>
+        <div class="form-group">
+            <label class="bmd-label-floating" for="DateTo">Закінчення дії:</label>
+            <input value="2022-02-24" type="date" class="form-control" readonly data-val="true" data-val-required="&#x412;&#x438;&#x431;&#x435;&#x440;&#x456;&#x442;&#x44C; &#x434;&#x430;&#x442;&#x443; &#x437;&#x430;&#x432;&#x435;&#x440;&#x448;&#x435;&#x43D;&#x43D;&#x44F;" id="DateTo" name="DateTo" />
+            <span class="field-validation-valid" data-valmsg-for="DateTo" data-valmsg-replace="true"></span>
+            <span class="field-validation-valid" data-valmsg-for="DateTo" data-valmsg-replace="true"></span>
+        </div>
+    </div>
+
+    <div class="checkbox">
+        <label for="Taxi">
+            Таксi <input type="checkbox" data-val="true" data-val-required="The Taxi field is required." id="Taxi" name="Taxi" value="true" />
+        </label>
+        <div class="taxi-tool-tip">
+            <div class="tool-tip">
+                <div class="arrow arrow-top"></div>
+                <span class="tool-tip-text-top">Виберіть якщо ТЗ використовується як таксі</span>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" value="EWA" data-val="true" data-val-required="The InsuranceApiType field is required." id="InsuranceApiType" name="InsuranceApiType" />
+    <input type="hidden" value="" id="InsurerCode" name="InsurerCode" />
+    <button id="get-calc-form" type="submit" class="btn btn-secondary btn-raised">Розрахувати</button>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8H6E1EqfKv1KjNp13vVxGOyqe5H9Im7e3Eb8YiFRILQsYgoxPxUsRBSILitB0ifNWJvN5VEvfx4Fl5O8rCemV65psgEaEyyIDVuyO5lfrSRfEAgU_Mk20YnA3NqWlTr8BvVQ6980GOn2HWWQd_6dldk" /><input name="OutsideUkraine" type="hidden" value="false" /><input name="Taxi" type="hidden" value="false" /></form>
+
+
+
+
+        </div>
+        <div id="companes-prace">
+
+        </div>
+    </div>
+</div>
+<div id="insurance-info">
+
+</div>
+
+
+
+
+            <hr />
+        </div>
+
+        
+        
+            <script src="/Scripts/jquery-3.3.1.min.js" type="text/javascript" crossorigin="anonymous"></script>
+            <script src="/lib/bootstrap/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>            
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+                integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+                crossorigin="anonymous"></script>
+
+        
+    <script src="/lib/bootstrap-material-design-dist/js/bootstrap-material-design.min.js"></script>
+    <script src="/js/site.js?v=OmMKJgSo6lJWN_43rNkKsoFiBX8k8nARHi9JI4b1nWE"></script>
+    <script src="/lib/Toastr/toastr.min.js"></script>
+    <script src="/lib/jquery.maskedinput.min.js"></script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"
+        integrity="sha256-F6h55Qw6sweK+t7SiOJX+2bpSAa3b/fnlrVCJvmEj1A="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.9/jquery.validate.unobtrusive.min.js"
+        integrity="sha256-paoxpct33kY9fpQlvgC8IokjGq8iqYaVFawgFPg8oz0="
+        crossorigin="anonymous"></script>
+
+
+    </body>
+</html>
+<style>
+    .container  {
+        margin:auto !important;
+    }
+</style>

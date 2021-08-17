@@ -1,0 +1,375 @@
+body{
+    font-family: "Arial";
+    font-size: 15px;
+    overflow-x: hidden;
+    
+    width:100%;
+
+}
+.lock{
+    overflow-y: hidden;
+}
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+/*HEADER*/
+.header{
+    max-width: 1872px;
+    height: 702px;
+    margin: 21px 24px 0 24px;
+    background-color: #5C4DB1;
+    padding-top: 27px;
+    border: 0px solid;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.header_up{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 43px;
+    background-color: rgba(0, 0, 0, 0.15) ;
+   
+}
+.header_up > p{
+    margin-left: 48px;
+    color: #fff;
+    font-family: 'Ubuntu' , bold;
+    font-size: 26px;
+}
+
+.header_application{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 30px 70px 0 0;   
+}
+.header_application img{
+    vertical-align: middle;
+}
+.header_application p{
+    font-family: 'Segoe UI';
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.dot{
+    width: 17px;
+    height: 17px;
+    background-color: #fff;
+    margin: 0 6px;
+    border: 0;
+    border-radius: 50%;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+/* .dots a{
+    width: 17px;
+    height: 17px;
+    background-color: #fff;
+    margin: 0 6px;
+    transition: 0.5s;
+    border: 0;
+    border-radius: 50px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    transition: 0.4;
+}
+.dots a:focus{
+    background-color: #85D59D;
+}
+.dots a:hover{
+    background-color: #85D59D;
+} */
+.header_slider{
+    width: 100%;
+    padding:0 40px;
+}
+.header_slider .card{
+    
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    
+    padding: 10px, 0;
+    margin: 130px 0 0 0;    
+}
+.header_slider .card p{
+    font-family: 'Segoe UI';
+    font-size: 3.4rem;
+    font-weight: 400;
+    line-height: 70px;
+    color: #fff;
+    text-align: center;
+}
+
+/* USEFUL INFO */
+.useful_info{
+    align-items: center;
+    position: relative;
+    max-width: 1872px;
+    height: 532px;
+    margin: -30px 24px 0px 24px;
+    background-color: #FFBF67;
+    border: 0px solid;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.useful_info p{
+    color:#5C4DB1;
+    font-family: 'Segoe UI';
+    font-size: 30px;
+}
+.useful_info ._header {
+    display:  flex;
+    justify-content: space-between;
+    align-items: center;
+    /*height: auto;*/
+    
+}
+.useful_info > .container > p{
+    padding: 40px 0;
+}
+.useful_slider{
+    padding: 0 0 0 10px 0;
+}
+.useful_slider .card{
+    display: flex;
+    flex-direction: column;
+    height: 325px;
+    width: 240px !important;
+    padding: 4px;
+    
+    background-color: #fff;
+    
+    box-shadow: 5px 3px 5px rgba(0,0,0,0.2);
+    border: 0px solid;
+    border-radius: 20px;
+    
+    transition: 0.3;
+}
+.useful_slider .card .title{
+     padding: 3px 0 7px 0;
+    color:#5C4DB1;
+    font-family: 'Segoe UI';
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 8px;
+}
+.useful_slider .card p{
+    color: #444444;
+    font-family: 'Segoe UI';
+    font-size: 1.1rem;
+    line-height: 1rem;
+    font-weight: 300;
+    align-content: center;
+    width: 205px;
+    margin: 0 auto;
+}
+.slick-list.dragable{
+    width:100%;
+}
+/* /USEFUL INFO */
+
+/* MAIN INFO */
+.main_info{
+    position: relative;
+    margin: -40px 0px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* flex-wrap: wrap; */
+    
+}
+.main_info h3,
+.right h3{
+    font-family: 'Segoe UI';
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 40px;
+    color: #fff;
+}
+/* MAIN INFO */
+
+/* LEFT */
+/*VIDEO/FORM*/
+.left h3{
+    padding: 20px 5px 0 30px;
+}
+.left > div{
+    width: 505px;
+    height: 900px;
+    background-color: #5C4DB1;
+    border: 0px solid;
+    border-radius: 40px;
+}
+.left > div > div{
+    position: relative;
+    margin-top: 26px;
+    max-width: 505px;
+    height: 842px;
+    background-color: #F6F6F6;
+    border: 0px solid;
+    border-radius: 40px;
+    box-shadow: 2px 3px 5px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+.video_file{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+    z-index: 2;
+}
+/* /VIDEO/FORM */
+/* /LEFT */
+
+/*RIGHT*/
+.right{
+    max-height: 1300px;
+}
+.right h3{
+    padding: 1.2rem 0 0 32px;
+}
+.right p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    color:#fff;
+    text-align: center;
+}
+.right p > a{
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    color:#fff;
+    text-align: center;
+}
+
+/*CALL COMISAR*/
+.call_comisar{
+    width: 490px;
+    height: 230px;
+    background-color: #85D59D;
+    border: 0px solid;
+    border-radius: 35px;
+    box-shadow: 2px 3px 5px rgba(0,0,0,0.3);
+}
+.call_comisar > div a img{
+    vertical-align: middle;
+}
+.call_comisar > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin:  1rem auto 1rem auto ;
+}
+/* /CALL COMISAR */
+
+/* CALL EVAKUATOR */
+.call_evakuator{
+     width: 490px;
+    height: 230px;
+    background-color: #D34A78;
+    border: 0px solid;
+    border-radius: 35px;
+    box-shadow: 2px 3px 5px rgba(0,0,0,0.3);
+    margin-top: 10px;
+}
+.call_evakuator > div{
+    width: 220px;
+    margin:  .4rem auto 1.3rem auto ;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+/* /CALL EVAKUATOR */
+
+/*CONTACTS*/
+.contacts{
+    width: 490px;
+    height: 487px;
+    background-color: #5C4DB1;
+    border: 0px solid;
+    border-radius: 35px;
+    box-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+    margin-top: 10px; 
+}
+.contacts h3{
+    padding: 1.1rem 0 0 2.6rem;
+}
+.contacts > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    height: 363px;
+    
+    margin: 18px 0 0 0;
+}
+.contacts p a:hover{
+    color:rgba(237, 237, 237, 0.78);
+}
+.contacts_application{
+    max-width: inherit;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.contacts_application img{
+    vertical-align: middle;
+}
+.contacts_application p{
+    font-family: 'Segoe UI';
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.contacts > div h4{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.4rem;
+    line-height: 26px;
+    font-weight: 400;
+    color: #fff;
+}
+.contacts > div > p{
+    line-height: 2rem;
+}
+/* /CONTACTS */
+/* /RIGHT */
+
+/*FOOTER*/
+
+.footer{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+}
+.footer p{
+    font-family: 'Segoe UI';
+    font-size: 17px;
+    font-weight: 300;
+    color: #444;
+}
+/* /FOOTER */
+
+
+
+
+
+

@@ -1,0 +1,97 @@
+/* LARGE SCREEN  */
+@media (max-width: 2500px) {
+    .header {
+      margin: 21px 10px 0 10px;
+    }
+    .useful_info {
+      margin: -30px auto 0 auto;
+    }
+    .sidenav {
+      margin: 21px 10px 0 0;
+    }
+  }
+  
+  /*PC Laptop*/
+  @media (min-width: 1023px) and (max-width: 1536px) {
+    .header {
+      margin: 15px 10px 0 10px;
+    }
+    .useful_info {
+      margin: -30px 10px 0 10px;
+    }
+    .useful_slider {
+      margin: 0 auto;
+    }
+    .sidenav{
+      margin: 15px 10px 0 0;
+    }
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1300px) {
+    
+    .header_slider .card{
+        justify-content: space-around;
+    }
+
+    .header_slider .card p{
+        font-size: 2.5rem;
+    }
+    .main_section .title{
+        font-size: 2.6rem;
+        margin-left: 2rem;
+    }
+    
+    .description_and_photo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .info{
+        margin-left: 10px;
+        margin-right: 15px;
+    } 
+    .right{
+        margin-right: 10px;
+    }
+    .right .call_comisar,
+    .right .call_evakuator,
+    .right .contacts{
+        width:40vw;
+
+    }
+  }
+
+  /* TABLETS & PHONES */
+  @media (min-width: 656px) and (max-width: 1023px){
+    #desktop {
+        visibility: hidden;
+        display: none;
+      }
+      body {
+        width: 100;
+        height: 100vh;
+      }
+      #mobile {
+        display: block;
+        visibility: visible;
+        width: 100vw;
+        height: 100vh;
+      }
+  }
+
+  @media (min-width: 320px) and (max-width: 655px){
+    #desktop {
+        visibility: hidden;
+        display: none;
+      }
+      body {
+        width: 100;
+        height: 100vh;
+      }
+      #mobile {
+        display: block;
+        visibility: visible;
+        width: 100vw;
+        height: 100vh;
+      }
+  }

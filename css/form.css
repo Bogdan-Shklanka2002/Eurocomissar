@@ -1,0 +1,217 @@
+.calculator{
+    width: 505px;
+    height: 900px;
+    background-color: #5C4DB1;
+    border: 0px solid;
+    border-radius: 20px;
+}
+.calculator_front{
+    position: relative;
+    margin-top: 26px;
+    width: 505px;
+    height: 842px;
+    background-color: #F6F6F6;
+    border: 0px solid;
+    border-radius: 20px;
+    box-shadow: 2px 3px 5px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 34.5px 0;
+}
+
+form{
+    width: 443px;
+    height:  815px;
+    padding: 35px 0 0 62px;
+}
+label{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color:#5C4DB1;
+}
+.form_checkbox_ukr label{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: #5E636C
+}
+.form-group {
+    border: 0;
+    margin: 0 0 34.5px 0;
+    padding: 0;
+    width: 385px
+}
+/* input {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    border: none;
+    border-bottom: 1px solid #BBBBBB;
+    background-color: #F6F6F6;
+    outline:none; 
+    
+    padding-bottom: 10px;
+    padding-top: 10px;
+    
+    width: 85.5px;
+    
+} */
+.franchise{
+    width: 86px;
+}
+.custom-checkbox{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+.custom-checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+.custom-checkbox+label::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+ 
+  border: 1px solid #adb5bd;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background-image: url(../images/empty_square.png);
+  
+}
+.custom-checkbox:checked+label::before {
+    
+    border-color: #0b76ef;
+    background-color: #0b76ef;
+}
+/* стили при наведении курсора на checkbox */
+.custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
+    border-color: #b3d7ff;
+  }
+  /* стили для активного состояния чекбокса (при нажатии на него) */
+  .custom-checkbox:not(:disabled):active+label::before {
+    background-image: url(../images/full_square.png);
+    background-color: #b3d7ff;
+    border-color: #b3d7ff;
+  }
+  /* стили для чекбокса, находящегося в фокусе */
+  .custom-checkbox:focus+label::before {
+    background-image: url(../images/full_square.png);
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+  .custom-checkbox:focus:not(:checked)+label::before {
+    background-image: url(../images/empty_square.png);
+    border-color: #80bdff;
+  }
+  /* стили для чекбокса, находящегося в состоянии disabled */
+  .custom-checkbox:disabled+label::before {
+    background-color: #e9ecef;
+  }
+
+
+
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form_select label{
+    display: block;    
+}
+select{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    border-bottom: 1px solid #BBBBBB;
+    position: relative;
+    width: 385px;
+    outline: none;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background: url(../images/select_pointer.png) no-repeat right#F6F6F6;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #5E636C;
+}
+.select:after{
+  content: '';
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+} 
+
+label{
+    display: block;
+    
+}
+fieldset .form_checkbox_ukr{
+    display: flex;
+    justify-content: center;
+    margin: 15px 0 0 0;  
+}
+
+.form_date{
+    display: flex;
+}
+.form_date .start{
+    border: 0;
+    margin: 0 0 0 0;
+    padding: 0;
+    width: 190px;
+}
+.form_date .end{
+    border: 0;
+    margin: 0 0 0 0;
+    padding: 0;
+    width: 190px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.form_date .start label, .form_date .end label{
+    display: block;
+}
+.form_date .start input, .form_date .end input{
+    width: 125px;
+}
+
+.form_checkbox_taxi{
+    display: flex;
+    justify-content: flex-end;
+}
+.form_checkbox_taxi label{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: #5E636C;
+}
+.form_checkbox_taxi label input{
+    width: 45px
+}
